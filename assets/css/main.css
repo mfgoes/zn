@@ -1,0 +1,28 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
+
+/*
+	Info
+*/
+
+body {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+body, input, select, textarea, a {
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 1.65;
+}
+
+
+
+/*Icons*/
+.icon {
+	font-family: 'Font Awesome 5 Free';
+}
+.icon.brands {
+	font-family: 'Font Awesome 5 Brands';
+}
