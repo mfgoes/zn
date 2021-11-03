@@ -1,17 +1,30 @@
-@import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,400&display=swap');
 
 /*
 	Info
 */
+.fas {
+	margin-right: 0.3rem;
+}
+
+.card-special {
+	border-radius: 10px;
+	color:#fff;
+	background: rgb(96,74,190);
+	background: linear-gradient(0deg, rgb(29, 50, 119) 0%, rgb(61, 41, 243) 100%);
+}
 
 body {
 	background-color: #ffffff;
 	color: #000000;
 }
 
+h1,h2,h3 {
+	font-weight: 600;
+}
+
 body, input, select, textarea, a {
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-family: "Open Sans", Helvetica, sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
 	line-height: 1.65;
