@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;500;600;700;1,400&display=swap');
 
 /*
 	Info
@@ -11,25 +11,45 @@
 	border-radius: 10px;
 	color:#fff;
 	background: rgb(96,74,190);
-	background: linear-gradient(0deg, rgb(29, 50, 119) 0%, rgb(61, 41, 243) 100%);
+	background: linear-gradient(0deg, rgb(36, 36, 36) 0%, rgb(29, 29, 29) 100%);
 }
 
+.navbar {
+	margin-bottom: 20px;
+  }
 body {
 	background-color: #ffffff;
 	color: #000000;
 }
 
-h1,h2,h3 {
+h1,h2,h3, h4 {
 	font-weight: 600;
 }
 
 body, input, select, textarea, a {
 	font-family: "Open Sans", Helvetica, sans-serif;
 	font-size: 1rem;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1.65;
 }
 
+.fw-bolder {
+	font-weight: 500;
+}
+
+.lead {
+	font-weight: 400;
+}
+.nav-item a {
+	color:#000000;
+}
+.nav-item a:hover {
+	color:#000000a2;
+}
+.avatar-img {
+	width: 110px;
+	height: auto;
+}
 /*bootstrap placeholders*/
 .bd-placeholder-img {
   font-size: 1.125rem;
@@ -50,6 +70,17 @@ body, input, select, textarea, a {
 .icon {
 	font-family: 'Font Awesome 5 Free';
 }
-.icon.brands {
+.icon_brands {
 	font-family: 'Font Awesome 5 Brands';
+	font-size: 1.5em;
+	position: relative;
+	top: 3px;
+	margin-right: 2px;
+	color: #2c2c2c;
+}
+
+@media only screen and (min-width: 700px) {
+	.special-max-width {
+		max-width: 500px;
+	}
 }
