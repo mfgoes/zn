@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
 
+@font-face {
+    font-family: Walkway;
+    src:local("C:\Users\Website\fonts\Harlow_Solid_Italic.ttf");
+}
+
 /*
 	Info
 */
@@ -26,6 +31,10 @@ h1,h2,h3, h4 {
 	font-weight: 600;
 }
 
+h2 {
+	font-family: "Walkway";
+}
+
 body, input, select, textarea, a {
 	font-family: "Open Sans", Helvetica, sans-serif;
 	font-size: 1rem;
@@ -50,6 +59,19 @@ body, input, select, textarea, a {
 	width: 110px;
 	height: auto;
 }
+.text-brand {
+	color: #74849d;
+}
+.deco-none a{
+	text-decoration:  none;
+	color: #6c757d;
+	transition: 0.3s;
+}
+.deco-none a:hover{
+	opacity: 0.75; transition: 0.3s;
+}
+
+
 /*bootstrap placeholders*/
 .bd-placeholder-img {
   font-size: 1.125rem;
@@ -76,7 +98,7 @@ body, input, select, textarea, a {
 	position: relative;
 	top: 3px;
 	margin-right: 2px;
-	color: #2c2c2c;
+	color: #6c757d;
 }
 
 @media only screen and (min-width: 700px) {
