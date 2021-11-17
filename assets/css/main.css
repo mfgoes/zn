@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
-
-@font-face {
-    font-family: Walkway;
-    src:local("C:\Users\Website\fonts\Harlow_Solid_Italic.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;500;600;700;1,400&display=swap');
 
 /*
 	Info
@@ -21,7 +16,8 @@
 
 .navbar {
 	margin-bottom: 20px;
-  }
+ }
+
 body {
 	background-color: #ffffff;
 	color: #000000;
@@ -29,17 +25,15 @@ body {
 
 h1,h2,h3, h4 {
 	font-weight: 600;
-}
-
-h2 {
-	font-family: "Walkway";
+	font-family: 'Open Sans', sans-serif;
 }
 
 body, input, select, textarea, a {
-	font-family: "Open Sans", Helvetica, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.65;
+	text-decoration: none;;
 }
 
 .fw-bolder {
@@ -53,24 +47,12 @@ body, input, select, textarea, a {
 	color:#000000;
 }
 .nav-item a:hover {
-	color:#000000a2;
+	color:#0000006c;
 }
 .avatar-img {
 	width: 110px;
 	height: auto;
 }
-.text-brand {
-	color: #74849d;
-}
-.deco-none a{
-	text-decoration:  none;
-	color: #6c757d;
-	transition: 0.3s;
-}
-.deco-none a:hover{
-	opacity: 0.75; transition: 0.3s;
-}
-
 
 /*bootstrap placeholders*/
 .bd-placeholder-img {
@@ -98,8 +80,19 @@ body, input, select, textarea, a {
 	position: relative;
 	top: 3px;
 	margin-right: 2px;
-	color: #6c757d;
+	color: #2c2c2c;
 }
+
+
+ .link-subtle {
+	 color: #2c2c2c;
+	 transition: 0.5s;
+ }
+ .icon_brands:hover, .link-subtle:hover {
+	color: #2c2c2c94;
+	transition: 0.5s;
+}
+
 
 @media only screen and (min-width: 700px) {
 	.special-max-width {
