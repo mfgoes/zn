@@ -94,7 +94,6 @@ body, input, select, textarea, a {
 .avatar-img {
 	width: 110px;
 	height: auto;
-	border-radius: 50%;
 }
 
 /*bootstrap placeholders*/
