@@ -6,26 +6,117 @@
 
 /*Backgrounds and color replacements*/
 :root {
-	--brandprimary: #F9CA52;
+	--brandprimary: #1EAEDB;
 	--brandwhite: #F3F3F3;
 	--bgrblack: #060606;
-	--bgrdark2: #141414;
-	--brandprimaryhover: #e1b442;
+	--bgrdark2: #F3F3EF;
+	--brandprimaryhover: #1aa0c9;
+	--gray50: #A0A4A8; 
 	}
 
-	
+
+/*Add a background to all pages*/
+body {
+	background-image: url("../images/pattern\ 1.jpg");
+	background-repeat: repeat;
+}
+
+h1,h2,h3, h4 {
+	font-weight: 300;
+	font-family: 'Raleway', 'Open Sans', sans-serif;
+}
+
+h1, .h1 {
+font-size: 45px;
+text-transform: none;
+}
+
+h2, .h2 {
+font-size: 42px;
+line-height: 52px;
+}
+
+h3, .h3 {
+font-weight: 500;
+}
+
+h4, .h4 {
+font-size: 20px;
+line-height: 30px;
+font-weight: 500;
+}
+
+h5, .h5 {
+font-size: 10px;
+font-weight: 500;
+color: #818181;
+letter-spacing: 0.1em;
+line-height: 26px;
+margin-bottom: 5px;
+text-transform: uppercase;
+}
+
+a {
+	color: var(--brandprimary);
+}
+
+a:hover {
+	color: var(--brandprimaryhover);
+}
+
+.project-info {
+	margin-bottom: 10px;
+}
+
+.project-info p {
+	font-size: 14px;
+}
+
+h6, .h6 {
+font-size: 14px;
+}
+
+
 .text-dark2 {
-	color: #c2c2c2;
+	color: #1e1d1d;
 }
 
 .text-darker {
 	color: #818181;
 }
 
+.card-body-with-arrow a, .card-link a:hover {
+	color: inherit;
+}
 
 .fas {
 	margin-right: 0.3rem;
 }
+
+.section {
+	padding: 120px 0px;
+}
+
+.section-sm {
+	padding: 60px 0px;
+}
+
+.page-title h1:after {
+	position: absolute;
+	content: "";
+	left: 50%;
+	bottom: 0px;
+	width: 40px;
+	height: 2px;
+	margin-left: -25px;
+	background: var(--brandprimary);
+  }
+  
+.page-title h1 {
+	position: relative;
+    padding-bottom: 30px;
+}
+
 
 /*Other stuff*/
 
@@ -33,12 +124,9 @@
 	margin-bottom: 20px;
  }
 
-body {
-	background-color: var(--bgrblack);
-	color: var(--brandwhite);
-}
-
-
+ .navbar-brand {
+	font-size: 1em;
+ }
 
 
 .bg-dark2 {
@@ -46,32 +134,64 @@ body {
 }
 
 .card {
-	background-color: inherit;
-	border: 1px solid rgba(52, 52, 52, 0.949);
+	/*background-color: var(--brandwhite);*/
+	/*border: 1px solid rgba(52, 52, 52, 0.949);*/
+}
+
+.card-rounded {
+	border-radius: 10px;
+}
+.card-rounded img {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.card-text {
+	margin-bottom: 5px;
 }
 
 .card-gray {
 	background-color: #212121;
+	width: 100%;
+}
+
+.card-transparent {
+	width: 100%;
+	border-width: 0px;
 }
 
 .btn-primary {
 	background-color: var(--brandprimary);
-	color: var(--bgrblack);
+	color: var(--brandwhite);
 	border-color: transparent;	
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
 	background-color: var(--brandprimaryhover);
-	color: var(--bgrblack);
-	border-color: white;	
+	border-color: transparent;
 }
 
-h1,h2,h3, h4 {
-	font-weight: 600;
-	font-family: 'Josefin Sans', 'Open Sans', sans-serif;
+.btn-secondary {
+	background-color: transparent;
+	color: var(--bgrblack);
 }
+
+.arrow-link img {
+	width: 24px;
+	transform: 0.3s;
+	opacity: 0.2;
+}
+.arrow-link:hover {
+	opacity: 0.8;
+	transform: 0.3s;
+}
+.card-body-with-arrow {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+  }
 
 body, input, select, textarea, a {
-	font-family: 'Inter', Helvetica, 'Open Sans', sans-serif;
+	font-family: 'Helvetica', 'Inter', 'Open Sans', sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.65;
@@ -83,8 +203,17 @@ body, input, select, textarea, a {
 }
 
 .lead {
-	font-size: 1.2em;
+	font-size: 1.3em;
+	font-weight: 300;
+	font-family: Arial, Helvetica, sans-serif;
 }
+
+.text-label {
+	color: var(--gray50);
+	margin-bottom: 5px;
+}
+
+
 .nav-item a {
 	color:#000000;
 }
@@ -144,9 +273,29 @@ body, input, select, textarea, a {
 }
 /*card images*/
 .card-img-top-cover {
-    width: 100%;
-    height: 20vw;
-    object-fit: cover;
+    object-fit: contain;
+	width: 100%;
+	transition: transform 0.3s ease;
+}
+.card-img-top-cover:hover {
+	transform: scale(1.01);
+	object-fit: contain;
+}
+
+
+.card-link {
+	display: block;
+  }
+
+  .card-link h4:hover {
+	text-decoration: underline;
+  }
+
+.img-services {
+	max-height: 150px;
+	width: auto;
+	object-fit: contain;
+	padding-top: 10px;
 }
 
 /*animations*/
@@ -164,13 +313,15 @@ body, input, select, textarea, a {
 
 /* The typing effect */
 .typewriter h2 {
+	color: var(--brandprimary);
+	font-weight: 300;
 	overflow: hidden; /* Ensures the content is not revealed until the animation */
-	border-right: .12em solid var(--brandprimaryhover); /* The typwriter cursor */
+	border-right: .03em solid var(--brandwhite); /* The typwriter cursor */
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-	letter-spacing: .15em; /* Adjust as needed */
+	letter-spacing: .01em; /* Adjust as needed */
 	animation: 
-	  typing 2s steps(14, end),
+	  typing 2s steps(24, end),
 	  blink-caret .75s step-end infinite;
 }
 .typewriter {
@@ -179,6 +330,15 @@ body, input, select, textarea, a {
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
 }
+@media screen and (max-width: 800px) {
+	.typewriter h2 {
+		animation: none;
+		white-space: wrap;
+		text-align: center;
+	}
+	
+}
+
 
 @keyframes typing {
 	from { width: 0% }
@@ -188,7 +348,7 @@ body, input, select, textarea, a {
  /* The typewriter cursor effect */
  @keyframes blink-caret {
 	from, to { border-color: transparent }
-	50% { border-color: var(--brandprimaryhover); }
+	50% { border-color: var(--brandprimary); }
 }
 
 
