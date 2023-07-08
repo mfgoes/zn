@@ -12,6 +12,7 @@
 	--bgrdark2: #F3F3EF;
 	--brandprimaryhover: #1aa0c9;
 	--gray50: #A0A4A8; 
+	--brand-secondary: #ef870c;
 	}
 
 
@@ -121,7 +122,8 @@ font-size: 14px;
 /*Other stuff*/
 
 .navbar {
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
+	background-color: white;
  }
 
  .navbar-brand {
@@ -158,6 +160,7 @@ font-size: 14px;
 .card-transparent {
 	width: 100%;
 	border-width: 0px;
+	background-color: transparent;
 }
 
 .btn-primary {
@@ -202,16 +205,21 @@ body, input, select, textarea, a {
 	font-weight: 500;
 }
 
+
 .lead {
-	font-size: 1.3em;
-	font-weight: 300;
-	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: 500;
+	font-family: 'Inter',Arial, Helvetica, sans-serif;
+	margin-bottom: 0px;
+	color: #2c2c2c;
 }
 
 .text-label {
 	color: var(--gray50);
 	margin-bottom: 5px;
 }
+
+
 
 
 .nav-item a {
@@ -313,28 +321,36 @@ body, input, select, textarea, a {
 
 /* The typing effect */
 .typewriter h2 {
-	color: var(--brandprimary);
+	color: #71d2ea; /*var(--brandprimary);*/
 	font-weight: 300;
+	font-size: 3.8em;
 	overflow: hidden; /* Ensures the content is not revealed until the animation */
-	border-right: .03em solid var(--brandwhite); /* The typwriter cursor */
+	border-right: 0em solid var(--brandwhite); /* The typwriter cursor */
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	letter-spacing: .01em; /* Adjust as needed */
 	animation: 
-	  typing 2s steps(24, end),
+	  typing 1s steps(40, end),
 	  blink-caret .75s step-end infinite;
 }
 .typewriter {
 	width: fit-content;
 	margin: auto;
 	animation-duration: 1s;
-	animation-iteration-count: infinite;
+	animation-iteration-count: infinite ease-out;
 }
+@media screen and (max-width: 1100px) {
+	.typewriter h2 {
+		font-size: 3em;
+	}
+}
+
 @media screen and (max-width: 800px) {
 	.typewriter h2 {
 		animation: none;
 		white-space: wrap;
 		text-align: center;
+		font-size: 2em;
 	}
 	
 }
@@ -356,4 +372,51 @@ body, input, select, textarea, a {
 ::selection {
 	background: var(--brandprimary);
 	color: black;
+  }
+
+
+  
+/*line decoration home page*/
+
+/*Speech bubble element*/
+.tri-down {
+
+    /* Styling block element, not required */
+    position: relative;
+    margin-bottom: 2em;
+    padding: 1em; 
+    border-bottom: 2px solid var(--brand-secondary);
+    background: #fff;
+	width: 100%;
+  }
+
+  /* Required for Down Triangle */
+  .tri-down:before, .tri-down:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom: 0;
+  }
+
+  /* Stroke */
+  .tri-down:before {
+    bottom: -28px;
+   left: calc(50% - 30px); /* Adjusted to center the triangle */
+    border-top-color: var(--brand-secondary);
+    border-width: 28px;
+  }
+
+  /* Fill */
+  .tri-down:after {
+    bottom: -25.5px;
+    left: calc(50% - 30px); /* Adjusted to center the triangle */
+    border-top-color: #fff;
+    border-width: 28px;
+  }
+    
+  .full-width {
+	width: 100%;
   }

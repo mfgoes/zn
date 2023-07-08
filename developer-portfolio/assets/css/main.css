@@ -51,7 +51,7 @@ body, input, select, textarea, a {
 }
 .avatar-img {
 	width: 110px;
-	height: auto;
+	height: 110px;
 }
 
 /*bootstrap placeholders*/
@@ -99,3 +99,4 @@ body, input, select, textarea, a {
 		max-width: 500px;
 	}
 }
+
