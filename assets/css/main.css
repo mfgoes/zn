@@ -328,11 +328,12 @@ body, input, select, textarea, a {
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	letter-spacing: .01em; /* Adjust as needed */
-	opacity: 0; /* Start with opacity 0 */
-	animation:
-	  typing 1s steps(40, end) 0.5s, /* Animation with a 0.5-second delay */
+	/* opacity: 0; /* Start with opacity 0 */
+	/*animation:
+	  typing 1s steps(40, end) 0.5s, 
 	  blink-caret .75s step-end infinite;
-	animation-fill-mode: forwards; /* Maintain the final state of the animation */
+	animation-fill-mode: forwards; 
+	*/
   }
   
   
