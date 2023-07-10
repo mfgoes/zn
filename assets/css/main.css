@@ -65,6 +65,12 @@ a:hover {
 	color: var(--brandprimaryhover);
 }
 
+.dropdown-toggle::after {
+	padding-left: 0px;
+}
+.title {
+	color: var(--brandprimary);
+}
 .project-info {
 	margin-bottom: 10px;
 }
@@ -434,12 +440,25 @@ body, input, select, textarea, a {
 	padding: 20px 6px;
   }
   
+  .nav-link {
+	transition: 0s;
+  }
+
+  .nav-link:focus, .nav-link:hover {
+	color: var(--brand-secondary);
+  }
   .navbar-nav .nav-link {
-	padding: 20px 15px !important;
+	padding: 20px 15px;
 	/*text-transform: uppercase;*/
 	font-size: 14px;
 	letter-spacing: 1px;
 	font-weight: 500;
+  }
+
+  @media screen and  (max-width: 575px) {
+	.navbar-nav .nav-link {
+		padding-left: 0px;
+	}
   }
   
   ul.dropdown-menu {
