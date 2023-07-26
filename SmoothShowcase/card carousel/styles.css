@@ -1,0 +1,30 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+}
+
+h2{
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.carousel{
+    width: 90%;
+    margin: 0px auto;
+}
+
+.slick-slide img{
+    width: 100%;
+}
+
+.slick-prev, .slick-next{
+    background: #000;
+    border-radius: 15px;
+    border-color: transparent;
+}
