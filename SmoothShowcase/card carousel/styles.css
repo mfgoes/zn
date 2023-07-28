@@ -1,6 +1,15 @@
+:root {
+    --background-color: #141414;
+    --text-primary-color: #FFFFFF;
+    --accent-white-color: #E2EBDF;
+    --text-muted-color: #666666;
+    --background-accent-white: #F0F0F0;
+  }
+
 html, body{
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
 }
 
 .wrapper{
@@ -9,10 +18,14 @@ html, body{
     text-align: center;
 }
 
-h2{
+h1, h2, h3, h4, h5, p {
     font-family: sans-serif;
-    color: #fff;
+    color: var(--text-primary-color);
 }
+
+a {
+    color: var(--accent-white-color);
+  }
 
 .carousel{
     width: 90%;
@@ -27,4 +40,9 @@ h2{
     background: #000;
     border-radius: 15px;
     border-color: transparent;
+}
+
+.project {
+    background-color: red;
+    margin: 20px;
 }
