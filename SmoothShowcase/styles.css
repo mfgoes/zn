@@ -174,11 +174,19 @@ footer .swiper-pagination {
 
 /*Parallax stuff - overwrites old project img containers*/
 
+.project-img-wrapper {
+    width: 100%;
+    height: 0;
+    padding-bottom: 161.8%;
+    overflow: hidden;
+    position: relative;
+}
+
 .project-img-wrapper img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;  /* make the image larger than its container */
+    width: 150%;  /* make the image larger than its container */
     height: 120%; /* make the image larger than its container */
     object-fit: cover;
     border-radius: 5px;
@@ -201,33 +209,13 @@ footer .swiper-pagination {
     }
 }
 
+
+
+
+
+
 /***** BOOTSTRAP STYLE ATTRIBUTES *****/
 
 .my-1 {
     margin: 10px 0px;
-}
-
-
-/*Page change*/
-#fullscreen-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    display: none;
-    border-radius: 10px;
-    transition: background-color 1s ease-out;
-}
-
-#fullscreen-image {
-    position: absolute;
-    transition: all 1s ease-out;
-    object-fit: cover;
-    border-radius: 10px;
-    object-position: center; /* center the image within the container */
 }
