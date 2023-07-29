@@ -11,6 +11,7 @@ var mySwiper = new Swiper('.swiper-container', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+    type: 'fraction',  // numbers instead of dots
   },
   mousewheel: {
     invert: false,
@@ -31,3 +32,4 @@ var mySwiper = new Swiper('.swiper-container', {
     }
   }
 });
+
