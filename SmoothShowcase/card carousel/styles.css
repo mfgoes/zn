@@ -92,7 +92,10 @@ a {
    object-fit: cover;
 }
 
+
+
 .project {
+    cursor: pointer;
     margin: 20px;
     width: 60vh;
     overflow: hidden;
@@ -107,6 +110,7 @@ a {
     position: relative;
     overflow: hidden;
     border-radius: 5px;
+    background-color: var(--background-color); 
 }
 
 .project-img-wrapper img {
@@ -115,6 +119,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
+    transition: opacity 0.5s ease-out;
 }
 
 .project-content {
@@ -123,24 +128,28 @@ a {
     padding-top: 0px;
     padding-left: 0px;
     color: var(--accent-white-color);
-    opacity: 0.5;
-    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s, transform 0.5s ease-in-out;
 }
 
-.project:hover .project-content {
-    opacity: 1;
-    transition: opacity 0.3s;
+.swiper-slide:hover .project-content {
+    opacity: 1 !important;
+    transform: translateY(0px) !important;
 }
 
 .project-content h2 {
     font-size: 1.6rem;
     margin-top: 25px;
     margin-bottom: 5px;
+    transition: color 0.3s;  /* Add this line */
 }
 
 .project-content p {
     font-size: 1rem;
     margin-top: 0px;
+    line-height: 1.4em;
+    color: var(--text-muted-color);
 }
 
 footer {
@@ -206,7 +215,6 @@ footer .swiper-pagination {
 .my-1 {
     margin: 10px 0px;
 }
-
 
 /*Page change*/
 #fullscreen-container {

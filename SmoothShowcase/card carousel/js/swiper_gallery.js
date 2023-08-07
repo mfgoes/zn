@@ -30,6 +30,39 @@ var mySwiper = new Swiper('.swiper-container', {
       slidesPerView: 4,
       slidesPerGroup: 1
     }
-  }
-});
+  },
+  on: {
+    slideChange: function () {
+      let allSlides = Array.from(this.slides); // Convert to array
 
+      allSlides.forEach((slide, index) => {
+        let content = slide.querySelector('.project-content');
+        
+        if (index === this.activeIndex) {
+          content.style.opacity = "1";
+          content.style.transform = "translateY(0px)";
+        } else {
+          content.style.opacity = "0";
+          content.style.transform = "translateY(10px)";
+          
+        }
+      });
+    },
+  },
+  slideChange: function() {
+    let allSlides = Array.from(this.slides); // Convert to array
+
+    allSlides.forEach((slide, index) => {
+      let content = slide.querySelector('.project-content');
+      
+      if (index === this.activeIndex) {
+        content.style.opacity = "1";
+        content.style.transform = "translateY(0px)";
+      } else {
+        content.style.opacity = "0";
+        content.style.transform = "translateY(10px)";
+      }
+    });
+  }
+  
+});

@@ -13,6 +13,7 @@ function expandImage(id) {
     fullscreenImage.style.width = rect.width + 'px';
     fullscreenImage.style.height = rect.height + 'px';
     fullscreenImage.src = imageUrl;
+    fullscreenImage.style.opacity = 1; // Start at full opacity
 
     fullscreenContainer.style.display = "flex";
 
@@ -21,7 +22,7 @@ function expandImage(id) {
         fullscreenImage.style.left = '0px';
         fullscreenImage.style.width = '100vw';
         fullscreenImage.style.height = '100vh';
-        fullscreenContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+
     }, 100);
 
     setTimeout(function() {
