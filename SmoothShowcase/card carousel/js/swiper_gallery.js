@@ -66,3 +66,9 @@ var mySwiper = new Swiper('.swiper-container', {
   }
   
 });
+
+// Immediately target the first slide after initialization
+const firstSlide = mySwiper.slides[0];
+const firstSlideContent = firstSlide.querySelector('.project-content');
+firstSlideContent.style.opacity = "1";
+firstSlideContent.style.transform = "translateY(0)";
