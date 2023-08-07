@@ -91,7 +91,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
     font-size: 18px;
     color: white;
     -webkit-box-sizing: border-box;
@@ -167,8 +167,9 @@ a {
 footer {
     display: flex;
     justify-content: space-between; /* Distributes space evenly between the two divs */
-    padding: 20px; /* Add padding as needed */
-    align-items: center; /* Centers items vertically */
+    padding: 30px; /* Add padding as needed */
+    padding-bottom: 50px;
+    align-items: flex-end; /* Centers items vertically */
     height: 50px;
 }
 
@@ -224,8 +225,15 @@ footer .swiper-pagination {
 
 /***** BOOTSTRAP STYLE ATTRIBUTES *****/
 
-.my-1 {
-    margin: 10px 0px;
+.brand-text {
+    font-family: 'Campton Book', 'Open Sans', Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+.text-small {
+    font-size: 0.8em;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 /*Page change*/
