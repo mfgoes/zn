@@ -1,0 +1,126 @@
+.about {
+    @include containerV;
+
+    .wrapper {
+        display: flex;
+        gap: 13.5vw;
+
+        @include devices(tablet) {
+            flex-direction: column;
+            gap: 5vw;
+        }
+
+        @include devices(mobile) {
+            gap: 7vw;
+        }
+
+        .wrapper_left {
+            @include font18;
+            width: 25%;
+
+            @include devices(tablet) {
+                width: 100%;
+            }
+
+            span {
+                color: $grey;
+            }
+
+            ul {
+                @include mT20;
+
+                li {
+                    margin: 0.15vw 0;
+
+                    @include devices(laptop) {
+                        margin: 0.50vw 0;
+                    }
+
+                    @include devices(tablet) {
+                        margin: 1vw 0;
+                    }
+
+                    @include devices(mobile) {
+                        margin: 2vw 0;
+                    }
+                }
+            }
+        }
+
+        .wrapper_right {
+            width: 80%;
+
+            @include devices(tablet) {
+                width: 100%;
+            }
+
+            h1 {
+                @include font48;
+
+                span {
+                    border: 1.5px solid $black;
+                    border-radius: 50px;
+                    padding: .1vw 1vw;
+                    display: inline-block;
+
+                    @include devices(laptop) {
+                        padding: .1vw 1.5vw;
+                    }
+
+                    @include devices(tablet) {
+                        padding: .1vw 2.5vw;
+                    }
+                }
+            }
+
+            >div {
+                @include mT30;
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+
+                @include devices(mobile) {
+                    flex-direction: column;
+                    gap: 8vw
+                }
+
+                p {
+                    @include font20;
+                    width: 70%;
+
+                    @include devices(laptop) {
+                        width: 60%;
+                    }
+
+                    @include devices(mobile) {
+                        width: 100%;
+                    }
+                }
+
+                a {
+                    color: $grey;
+                    @include font18;
+
+                    @include devices(mobile) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .about_img {
+        @include containerV;
+        overflow: hidden;
+
+        @include devices(mobile) {
+            height: 50vh;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}

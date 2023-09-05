@@ -1,0 +1,80 @@
+.footer {
+    background: $black;
+    color: $white;
+    margin-top: -5vw;
+    padding-bottom: 4.16vw;
+    padding-top: 4.16vw + 5vw;
+
+    @include devices(tablet) {
+        padding-bottom: 5vw;
+        padding-top: 10vw + 5vw;
+    }
+    @include devices(mobile) {
+        margin-top: -10vw;
+        padding-top: 15vw + 10vw;
+    }
+
+    .row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include devices(mobile) {
+            flex-direction: column-reverse;
+            gap: 4vw;
+        }
+    }
+
+    .row-top {
+
+        p:nth-child(1),
+        p:nth-child(3) {
+            @include font18;
+        }
+
+        p:nth-child(2) {
+            @include font20;
+        }
+    }
+
+    .row-mid {
+        padding: 13vw 0;
+        text-align: center;
+
+        @include devices(tablet) {
+            padding: 25vw 0;
+        }
+        @include devices(mobile) {
+            padding: 40vw 0;
+        }
+        p {
+            @include font18;
+            color: $grey;
+        }
+
+        h1 {
+            @include font72;
+            @include mT20;
+        }
+    }
+
+    .row-bottom {
+        p {
+            @include font18;
+        }
+
+        ul {
+            display: flex;
+            gap: 2vw;
+            @include devices(mobile) {
+                gap: 5.2vw;
+            }
+            li {
+                a {
+                    color: $white;
+                    @include font20;
+                }
+            }
+        }
+    }
+}

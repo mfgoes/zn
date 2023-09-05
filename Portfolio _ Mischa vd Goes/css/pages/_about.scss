@@ -1,0 +1,180 @@
+.about_header {
+    display: flex;
+    align-items: center;
+    padding-top: 13.5vw;
+
+    @include devices(tablet) {
+        padding-top: 25vw;
+    }
+
+    @include devices(mobile) {
+        padding-top: 30vw;
+    }
+
+    p {
+        @include font48;
+    }
+}
+
+.about_wrapper {
+    .content {
+        @include containerV;
+        display: flex;
+        align-items: first baseline;
+        gap: 13.5vw;
+
+        @include devices(tablet) {
+            flex-direction: column;
+            gap: 5vw;
+        }
+
+        .left {
+            width: 25%;
+
+            @include devices(tablet) {
+                width: 100%;
+            }
+
+            >div {
+                @include font18;
+                margin-bottom: 5.2vw;
+
+                span {
+                    color: $grey;
+                }
+
+                ul {
+                    @include mT20;
+
+                    li {
+                        margin: 0.15vw 0;
+
+                        @include devices(laptop) {
+                            margin: 0.50vw 0;
+                        }
+
+                        @include devices(tablet) {
+                            margin: 1vw 0;
+                        }
+
+                        @include devices(mobile) {
+                            margin: 2vw 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 80%;
+
+            @include devices(tablet) {
+                width: 100%;
+            }
+
+            h1 {
+                @include font32;
+                margin-bottom: 2.6vw;
+
+                span {
+                    border: 1.5px solid $black;
+                    border-radius: 50px;
+                    padding: .5vw 1vw;
+                    display: inline-block;
+
+                    @include devices(laptop) {
+                        padding: .5vw 1.5vw;
+                    }
+
+                    @include devices(tablet) {
+                        padding: .5vw 2.5vw;
+                    }
+                }
+            }
+
+            img {
+                @include mT100;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 50px;
+
+                @include devices(tablet) {
+                    border-radius: 30px;
+                }
+
+                @include devices(mobile) {
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+
+    #about {
+        .right {
+            p {
+                @include font20;
+                @include mT30;
+            }
+        }
+    }
+
+    #education {
+        .right {
+            ul {
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 2.6vw 0;
+                    border-bottom: 1px solid $grey;
+
+                    @include devices(tablet) {
+                        padding: 5.2vw 0;
+                    }
+
+                    @include devices(mobile) {
+                        padding: 8vw 0;
+                    }
+
+                    p {
+                        @include font28;
+                    }
+                }
+            }
+        }
+    }
+
+    #approach {
+        .right {
+            ul {
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: first baseline;
+                    padding: 2.6vw 0;
+                    border-bottom: 1px solid $grey;
+
+                    @include devices(tablet) {
+                        padding: 5.2vw 0;
+                    }
+
+                    @include devices(mobile) {
+                        padding: 8vw 0;
+                        flex-direction: column
+                    }
+
+                    h1 {
+                        @include font28;
+                        width: 100%;
+                    }
+
+                    p {
+                        @include font18;
+                        width: 100%;
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+    }
+}

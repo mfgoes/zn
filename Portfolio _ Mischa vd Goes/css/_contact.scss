@@ -1,0 +1,151 @@
+.contact{
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: all ease .5s;
+    @include devices(tablet) {
+        width: 80%;
+    }
+    @include devices(mobile) {
+        width: 100%;
+    }
+    .blur{
+        background-color: rgba(255, 255, 255, 0.6);
+        position: relative;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(15px);
+    }
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        padding: 5.2vw 2.6vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include devices(tablet) {
+            padding: 10.4vw 5.2vw;
+        }
+        @include devices(mobile) {
+            padding: 15vw 5.2vw;
+        }
+        .content{
+            .top{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p{
+                    @include font20;
+                }
+                img{
+                    width: 1.45vw;
+                    cursor: pointer;
+                    @include devices(tablet) {
+                        width: 3vw;
+                    }
+                    @include devices(mobile) {
+                        width: 4vw;
+                    }
+                }
+            }
+            .form{
+                margin-top: 5vw;
+                @include devices(tablet) {
+                    margin-top: 10vw;
+                }
+                @include devices(mobile) {
+                    margin-top: 15vw;
+                }
+                p{
+                    @include font28;
+                    line-height: 4vw;
+                    @include devices(tablet) {
+                      line-height: 8vw;
+                    }
+                    @include devices(mobile) {
+                        line-height: 10vw;
+                      }
+                    input{
+                        @include font28;
+                        background: none;
+                        border: none;
+                        border-bottom: 1px solid #CDCDCD;
+                        color: $black;
+                        padding-bottom: .4vw;
+                        margin-left: .5vw;
+                        width: fit-content;
+                        @include devices(tablet) {
+                            margin-left: 1vw;
+                        }
+                    }
+                    input:focus{
+                        outline: none;
+                    }
+                    ::placeholder{
+                        color: #CDCDCD;
+                    }
+                    input[type="email"],
+                    input[type="text"]{
+                        width: 16vw;
+                        @include devices(tablet) {
+                            width: 30vw;
+                        }
+                        @include devices(mobile) {
+                            width: 40vw;
+                        }
+                    }
+                    input[type="name"]{
+                        width: 15vw;
+                        @include devices(tablet) {
+                            width: 30vw;
+                        }
+                        @include devices(mobile) {
+                            width: 40vw;
+                        }
+                    }
+                    input[type="number"]{
+                        width: 8vw;
+                        @include devices(tablet) {
+                            width: 20vw;
+                        }
+                        @include devices(mobile) {
+                            width: 30vw;
+                        }
+                    }
+                }
+                .contact_btn{
+                    margin-top: 3.6vw;
+                    @include devices(tablet) {
+                        margin-top: 7vw;
+                    }
+                    @include devices(mobile) {
+                       margin-top: 10vw;
+                    }
+                }
+            }
+        }
+        ul{
+            display: flex;
+            gap: 3.6vw;
+            @include devices(mobile) {
+                gap: 7vw;
+            }
+            li{
+                a{
+                    @include font18;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+.contact.active{
+    transform: translateX(0%);
+}

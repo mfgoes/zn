@@ -1,0 +1,184 @@
+nav {
+    position: fixed;
+    top: 2.6vw;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    padding: 0 5.2vw;
+
+    @media only screen and (max-width: 670px) {
+        padding-left: 2.6vw;
+        padding-right: 2.6vw;
+    }
+
+    @include devices(mobile) {
+        top: 5vw;
+    }
+
+    .nav_logo {
+        p:nth-child(1) {
+            @include font20;
+            font-family: $fontM;
+        }
+
+        p:nth-child(2) {
+            @include font16;
+            margin-top: 0.26vw;
+            color: $grey;
+
+            @include devices(mobile) {
+                margin-top: 0vw;
+            }
+        }
+    }
+
+    .nav_btn {
+        display: none; // Hidden by default on desktop
+        background: $black;
+        padding: 1vw 1.2vw;
+        border-radius: 50px;
+        border-width: 0px;
+        width: -moz-fit-content;
+        width: fit-content;
+        min-width: 35px;
+        cursor: pointer;
+        color: white;
+    
+
+        @include devices(tablet) {
+            display: block; // Show it on tablet and below
+        }
+    }
+
+    .nav_links {
+        background: $white;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 0px;
+
+        li {
+            padding: 10px 20px;
+        }
+        
+        a {
+            color: $black;
+            font-size: 1em;
+        }
+
+        .active {
+            background: $black;
+            border-radius: 50px;
+
+            a {
+                color: $white;
+            }
+        }
+
+        @include devices(tablet) {
+            display: none; // Hide the primary nav on tablet and below
+        }
+    }
+}
+
+.responsive_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+
+    .close {
+        position: absolute;
+        color: $white;
+        top: 2.6vw; // Adjust this to match the `top` property of the nav or as per your design
+        right: 5.2vw; // Adjust this to match the `padding-right` property of the nav or as per your design
+        cursor: pointer;
+        padding: 1vw 1.2vw; // Same padding as the hamburger
+        border-radius: 40px; // Rounded corners
+        font-size: 1.5em; // Adjust size as needed
+        line-height: 1; // To center the X vertically
+    }
+    
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        li {
+            margin: 10px 0;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 50px;
+            
+        
+            &:hover {
+                color: $black;
+                background-color: #e2e1e1;
+                transition: 0.3s;
+
+                a {
+                    color: $black;
+                }
+            }
+            
+        }
+        .active {
+            background: $white;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        .active a {
+            color: $black;
+        }
+
+        a {
+            color: $white;
+            font-size: 1.2em;
+        }        
+    }
+
+    @include devices(desktop) {
+        display: none; // Hide the responsive nav on desktop
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 99;
+
+    &.active {
+        display: block;
+    }
+}
+
+.contact {
+    // Style for the contact popup
+    // Adjust as per design
+
+    .close2 {
+        cursor: pointer;
+    }
+}
+
+.responsive_nav.active {
+    transform: translateY(0);
+}

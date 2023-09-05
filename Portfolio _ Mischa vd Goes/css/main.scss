@@ -1,0 +1,289 @@
+/* colors */
+$black: #131417;
+$grey: #9FA0A3;
+$white: #fff;
+$bgColor: #F5F5F5;
+/* fonts */
+$fontL: ManropeL, sans-serif;
+$fontR: ManropeR, sans-serif;
+$fontM: ManropeM, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: $fontM;
+    background: $bgColor;
+    width: 100%;
+    overflow-x: hidden;
+    color: $black;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    width: 100%;
+    overflow: hidden
+}
+
+/*- breakpoints -*/
+@mixin devices ($breakpoint) {
+
+    @if $breakpoint ==laptop {
+        @media only screen and (max-width: 1140px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==tablet {
+        @media only screen and (max-width: 912px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==mobile {
+        @media only screen and (max-width: 670px) {
+            @content;
+        }
+    }
+}
+
+/*- Margins n Padding */
+.container {
+    padding-left: 5.2vw;
+    padding-right: 5.2vw;
+
+    @include devices(mobile) {
+        padding-left: 2.6vw;
+        padding-right: 2.6vw;
+    }
+}
+
+@mixin containerV {
+    padding-top: 5vw;
+
+    @include devices(tablet) {
+        padding-top: 10vw;
+    }
+
+    @include devices(mobile) {
+        padding-top: 15vw;
+    }
+}
+
+@mixin mT100 {
+    margin-top: 5.2vw;
+
+    @include devices(tablet) {
+        margin-top: 7vw;
+    }
+
+    @include devices(mobile) {
+        margin-top: 12vw;
+    }
+}
+
+@mixin mT50 {
+    margin-top: 2.6vw;
+
+    @include devices(tablet) {
+        margin-top: 5.2vw;
+    }
+
+    @include devices(mobile) {
+        margin-top: 8vw;
+    }
+}
+
+@mixin mT30 {
+    margin-top: 1.56vw;
+
+    @include devices(laptop) {
+        margin-top: 2vw;
+    }
+
+    @include devices(tablet) {
+        margin-top: 4vw;
+    }
+
+    @include devices(mobile) {
+        margin-top: 6vw;
+    }
+}
+
+@mixin mT20 {
+    margin-top: 1.04vw;
+
+    @include devices(laptop) {
+        margin-top: 1.5vw;
+    }
+
+    @include devices(tablet) {
+        margin-top: 3vw;
+    }
+
+    @include devices(mobile) {
+        margin-top: 5vw;
+    }
+}
+
+/*- Buttons -*/
+.button {
+    background: $black;
+    padding: 0.7vw 1.2vw;
+    border-radius: 50px;
+    width: fit-content;
+    cursor: pointer;
+
+    @include devices(laptop) {
+        padding: 1vw 1.5vw;
+    }
+
+    @include devices(tablet) {
+        padding: 1.8vw 3.6vw;
+    }
+
+    @include devices(mobile) {
+        padding: 2vw 4vw;
+    }
+
+    a {
+        color: $white;
+        font-size: .9vw;
+
+        @include devices(laptop) {
+            font-size: 1.1vw;
+        }
+
+        @include devices(tablet) {
+            font-size: 1.6vw;
+        }
+
+        @include devices(mobile) {
+            font-size: 2.6vw;
+        }
+    }
+}
+
+/*- Flip-Text-hover -*/
+.m-flip {
+    overflow: hidden;
+}
+
+.m-flip_item {
+    display: block;
+    position: relative;
+    top: 0;
+    transition: top 0.5s ease-out 0s;
+}
+
+a {
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: $black;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 90;
+    // pointer-events: none;
+    display: none;
+}
+
+.overlay.active {
+    opacity: .5;
+    display: block
+}
+
+/*- loader -*/
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $bgColor;
+    z-index: 999999999999;
+
+    .heading {
+        height: 5vw;
+        overflow: hidden;
+        @include devices(tablet) {
+            height: 9vw;
+        }
+        @include devices(mobile) {
+            height: 12vw;
+        }
+        h1 {
+            color: $black;
+            font-size: 3.75vw;
+            display: block;
+            font-weight: lighter;
+            letter-spacing: -1.5px;
+            @include devices(tablet) {
+                font-size: 7vw;
+            }
+            @include devices(mobile) {
+                font-size: 10vw;
+            }
+        }
+    }
+}
+
+#loader_overlay{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 0vh;
+    background-color: $black;
+    z-index: 9999;
+}
+
+/*- Cursor -*/
+#cursor {
+    width: .8vw;
+    height: .8vw;
+    background: $white;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transition: .1s ease;
+    z-index: 99999999;
+    mix-blend-mode: difference;
+
+    @include devices(tablet) {
+        display: none;
+    }
+}
+
+
+
+/* components */
+@import "font";
+@import "nav";
+@import "hero";
+@import "project";
+@import "about";
+@import "awward";
+@import "footer";
+@import "contact";
+/* pages */
+@import "./pages/about";
+@import "./pages/case";

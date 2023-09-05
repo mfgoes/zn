@@ -1,0 +1,127 @@
+
+.clickable-case {
+    text-decoration: none; 
+    display: inline-block;
+    flex: 0 1 auto;
+}
+
+.project {
+    @include mT50;
+
+    .project_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2.6vw;
+
+        .clickable-case {
+            
+
+            img {
+                border-radius: 50px;
+                cursor: pointer;
+                transition: scale cubic-bezier(0.19, 1, 0.22, 1) 1s;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                &:hover {
+                    scale: .95;
+                }
+
+                @include devices(tablet) {
+                    border-radius: 30px;
+                }
+
+                @include devices(mobile) {
+                    height: 70vw;
+                }
+            }
+
+            .case {
+
+                position: relative;
+                height: 100%;
+
+                .case_text {
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 10%;
+                    visibility: none;
+                    opacity: 0;
+                    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+                    transform: translateY(-50px);
+                    display: flex;
+                    justify-content: space-between;
+    
+                    @include devices(tablet) {
+                        flex-direction: column;
+                        gap: 1vw;
+                    }
+    
+                    @include devices(mobile) {
+                        left: 5%
+                    }
+    
+                    p {
+                        @include font16;
+                        background: #000000;
+                        color: $white;
+                        padding: .5vw 1vw;
+                        border-radius: 50px;
+                        opacity: .5;
+                        width: fit-content;
+    
+                        @include devices(tablet) {
+                            padding: 1vw 2vw;
+                        }
+                    }
+    
+                    div {
+                        display: flex;
+                        gap: .5vw;
+    
+                        @include devices(tablet) {
+                            flex-direction: column;
+                            gap: 1vw;
+                        }
+                    }
+                }
+            }
+            
+
+            &:hover .case_text {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .clickable-case:nth-child(1) {
+            width: 100%;
+        }
+                
+        .clickable-case:nth-child(2), .clickable-case:nth-child(4) {
+            width: 57%;
+        
+            @include devices(mobile) {
+                width: 100%;
+            }
+        }
+                
+        .clickable-case:nth-child(3), .clickable-case:nth-child(5) {
+            width: 40%;
+        
+            @include devices(mobile) {
+                width: 100%;
+            }
+        }
+        
+        
+    }
+
+    .project_btn {
+        @include mT100;
+    }
+}

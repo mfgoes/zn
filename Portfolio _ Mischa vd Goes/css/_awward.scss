@@ -1,0 +1,75 @@
+.awwards {
+    position: relative;
+    background: $bgColor;
+    padding-top: 7.8vw;
+    padding-bottom: 7.8vw;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+    @include devices(tablet) {
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
+    @include devices(mobile) {
+        padding-top: 15vw;
+        padding-bottom: 15vw;
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: first baseline;
+        gap: 13.5vw;
+
+        @include devices(tablet) {
+            flex-direction: column;
+            gap: 5vw;
+        }
+
+        @include devices(mobile) {
+            gap: 7vw;
+        }
+
+        .wrapper_left {
+            @include font18;
+            width: 25%;
+
+            @include devices(tablet) {
+                width: 100%;
+            }
+
+            p {
+                color: $grey;
+            }
+        }
+
+        .wrapper_right {
+            @include font28;
+            width: 80%;
+
+            @include devices(tablet) {
+                width: 100%;
+            }
+
+            ul {
+                li {
+                    padding: 2.6vw 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid $grey;
+
+                    @include devices(tablet) {
+                        padding: 5.2vw 0;
+                    }
+
+                    @include devices(mobile) {
+                        padding: 8vw 0;
+                    }
+                }
+            }
+        }
+    }
+}

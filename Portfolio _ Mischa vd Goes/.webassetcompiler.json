@@ -1,0 +1,14 @@
+{
+	"compileOnSave": true,
+	"exportFormats": [
+		{
+			"format": "expanded",
+			"sourceMap": false
+		}
+	],
+	"targetFolders": [
+		{
+			"input": ""
+		}
+	]
+}

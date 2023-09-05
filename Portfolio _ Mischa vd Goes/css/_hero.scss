@@ -1,0 +1,60 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: last baseline;
+    gap: 13.5vw;
+    padding-bottom: 5.2vw;
+    @include devices(tablet) {
+        height: 90vw;
+        flex-direction: column-reverse;
+        gap: 5vw;
+    }
+    @include devices(mobile) {
+        height: 120vw;
+        gap: 7vw;
+    }
+    .left {
+        width: 25%;
+        height: 15vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include devices(laptop) {
+            height: 17vw;
+        }
+        @include devices(tablet) {
+            width: 70%;
+        }
+        @include devices(mobile) {
+            width: 100%;
+            height: 25vw;
+        }
+        p:nth-child(1) {
+            @include font20;
+        }
+
+        p:nth-child(2) {
+            @include font18;
+
+            span {
+                margin-left: 2vw;
+                @include devices(tablet) {
+                    margin-left: 4vw;
+                }
+                @include devices(mobile) {
+                    margin-left: 8vw;
+                }
+            }
+        }
+    }
+
+    .right {
+        width: 80%;
+        @include devices(tablet) {
+            width: 100%;
+        }
+        h1 {
+            @include font94;
+        }
+    }
+}

@@ -1,0 +1,224 @@
+p {
+    font-size: 1em;
+
+    @include devices(tablet) {
+        font-size: 0.9em;
+    }
+}
+
+.case_header {
+    padding-top: 13.5vw;
+
+    @include devices(tablet) {
+        padding-top: 25vw;
+    }
+
+    @include devices(mobile) {
+        padding-top: 30vw;
+    }
+
+    h2 {
+        @include font48;
+        font-size: 3em;
+        min-width: 50%;
+
+        @include devices(tablet) {
+            width: 40%;
+        }
+
+        @include devices(mobile) {
+            width: 50%;
+        }
+    }
+
+
+
+    .filter {
+        @include mT50;
+        display: flex;
+        gap: 0.52vw;
+
+        @include devices(tablet) {
+            gap: 1vw;
+        }
+
+        @include devices(mobile) {
+            gap: 2.6vw;
+            flex-wrap: wrap;
+        }
+
+        a {
+            padding: 0.7vw 1.2vw;
+            border-radius: 50px;
+            width: fit-content;
+            background: none;
+            border: 1px solid $black;
+            color: $black;
+            transition: background cubic-bezier(0.19, 1, 0.22, 1) 1s;
+            font-size: .9vw;
+
+            &:hover {
+                background: $black;
+                color: $white;
+            }
+
+            @include devices(laptop) {
+                padding: 1vw 1.5vw;
+                font-size: 1.1vw;
+            }
+
+            @include devices(tablet) {
+                padding: 1.8vw 3.6vw;
+                font-size: 1.6vw;
+            }
+
+            @include devices(mobile) {
+                padding: 2vw 4vw;
+                font-size: 2.6vw;
+            }
+
+        }
+
+        a.active {
+            background: $black;
+            color: $white;
+        }
+    }
+
+    .back_link {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+
+        @include devices(tablet) {
+            gap: 2vw;
+        }
+
+        @include devices(mobile) {
+            gap: 3.2vw;
+        }
+
+        img {
+            width: 1.1vw;
+            transform: rotate(180deg);
+
+            @include devices(tablet) {
+                width: 2vw;
+            }
+
+            @include devices(mobile) {
+                width: 3vw;
+            }
+        }
+
+        a {
+            @include font18;
+            color: $black;
+        }
+    }
+}
+
+#subPages {
+    p {
+        @include mT100;
+    }
+}
+
+.case_wrapper {
+    @include containerV;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.6vw;
+    overflow: hidden;
+    padding-bottom: 7.8vw;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background: $bgColor;
+    position: relative;
+
+    @include devices(tablet) {
+        padding-bottom: 17vw;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
+    @include devices(mobile) {
+        padding-bottom: 15vw;
+        gap: 5vw;
+    }
+
+    .case {
+        position: relative;
+        /*height: 35vw;
+        width: 42vw;*/
+
+        @include devices(mobile) {
+            width: 100%;
+            height: 50vw;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: scale cubic-bezier(0.19, 1, 0.22, 1) 1s;
+            border-radius: 10px;
+
+            
+        }
+
+        .case_text {
+            width: 100%;
+            position: absolute;
+            left: 0%;
+            top: 10%;
+            visibility: none;
+            opacity: 0;
+            transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+            transform: translateY(-50px);
+            display: flex;
+            justify-content: space-between;
+
+            @include devices(tablet) {
+                flex-direction: column;
+                gap: 1vw;
+            }
+
+            @include devices(mobile) {
+                left: 5%
+            }
+
+            p {
+                @include font16;
+                background: #000000;
+                color: $white;
+                padding: .5vw 1vw;
+                border-radius: 50px;
+                opacity: .5;
+                width: fit-content;
+
+                @include devices(tablet) {
+                    padding: 1vw 2vw;
+                }
+            }
+
+            div {
+                display: flex;
+                gap: .5vw;
+
+                @include devices(tablet) {
+                    flex-direction: column;
+                    gap: 1vw;
+                }
+            }
+        }
+
+        &:hover .case_text {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+}
