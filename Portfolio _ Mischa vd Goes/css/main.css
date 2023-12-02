@@ -399,7 +399,9 @@ nav .nav_links .active a {
 }
 
 .hero {
-  height: 100vh;
+  color: white;
+  background-color: #131417;
+  height: 40vh;
   display: flex;
   align-items: last baseline;
   gap: 13.5vw;
@@ -535,26 +537,22 @@ nav .nav_links .active a {
 }
 
 .project {
-  margin-top: 2.6vw;
-}
-@media only screen and (max-width: 912px) {
-  .project {
-    margin-top: 5.2vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .project {
-    margin-top: 8vw;
-  }
+  color: white;
+  background-color: #131417;
+  padding-top: 50px;
 }
 .project .project_wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2.6vw;
+  gap: 20px;
+  align-items: flex-start;
+}
+.project .project_wrapper h1, .project .project_wrapper h2, .project .project_wrapper h3, .project .project_wrapper p, .project .project_wrapper a {
+  color: white;
 }
 .project .project_wrapper .clickable-case img {
-  border-radius: 50px;
+  border-radius: 20px;
   cursor: pointer;
   transition: scale cubic-bezier(0.19, 1, 0.22, 1) 1s;
   width: 100%;
@@ -563,7 +561,7 @@ nav .nav_links .active a {
      object-fit: cover;
 }
 .project .project_wrapper .clickable-case img:hover {
-  scale: 0.95;
+  scale: 0.99;
 }
 @media only screen and (max-width: 912px) {
   .project .project_wrapper .clickable-case img {
@@ -652,16 +650,16 @@ nav .nav_links .active a {
 .project .project_wrapper .clickable-case:nth-child(1) {
   width: 100%;
 }
-.project .project_wrapper .clickable-case:nth-child(2), .project .project_wrapper .clickable-case:nth-child(4) {
-  width: 57%;
+.project .project_wrapper .clickable-case:nth-child(2), .project .project_wrapper .clickable-case:nth-child(3) {
+  width: 48%;
 }
 @media only screen and (max-width: 670px) {
-  .project .project_wrapper .clickable-case:nth-child(2), .project .project_wrapper .clickable-case:nth-child(4) {
+  .project .project_wrapper .clickable-case:nth-child(2), .project .project_wrapper .clickable-case:nth-child(3) {
     width: 100%;
   }
 }
 .project .project_wrapper .clickable-case:nth-child(3), .project .project_wrapper .clickable-case:nth-child(5) {
-  width: 40%;
+  width: 48%;
 }
 @media only screen and (max-width: 670px) {
   .project .project_wrapper .clickable-case:nth-child(3), .project .project_wrapper .clickable-case:nth-child(5) {

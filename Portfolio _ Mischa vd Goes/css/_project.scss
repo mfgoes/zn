@@ -6,19 +6,28 @@
 }
 
 .project {
-    @include mT50;
+    //@include mT50; //figure out how this works so we can easily toggle 'dark mode' 
+    color: white;
+    background-color: #131417;
+    padding-top: 50px;;
+
 
     .project_wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 2.6vw;
+        gap: 20px;
+        align-items: flex-start;
+
+        h1, h2, h3, p, a {
+            color: white;
+        }
 
         .clickable-case {
             
 
             img {
-                border-radius: 50px;
+                border-radius: 20px;
                 cursor: pointer;
                 transition: scale cubic-bezier(0.19, 1, 0.22, 1) 1s;
                 width: 100%;
@@ -26,7 +35,7 @@
                 object-fit: cover;
 
                 &:hover {
-                    scale: .95;
+                    scale: 0.99; //
                 }
 
                 @include devices(tablet) {
@@ -102,8 +111,8 @@
             width: 100%;
         }
                 
-        .clickable-case:nth-child(2), .clickable-case:nth-child(4) {
-            width: 57%;
+        .clickable-case:nth-child(2), .clickable-case:nth-child(3) {
+            width: 48%;
         
             @include devices(mobile) {
                 width: 100%;
@@ -111,7 +120,7 @@
         }
                 
         .clickable-case:nth-child(3), .clickable-case:nth-child(5) {
-            width: 40%;
+            width: 48%;
         
             @include devices(mobile) {
                 width: 100%;
