@@ -6,7 +6,14 @@
     --background-accent-white: #F0F0F0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@font-face {
+    font-family: 'Campton Book';
+    src: url('../fonts/CamptonBook.otf') format('opentype'); /* Adjust the path if your CSS file is in a different directory */
+    font-weight: normal;
+    font-style: normal;
+}
 
 html, body {
     margin: 0;
@@ -41,9 +48,17 @@ a:hover {
 h1, h2, h3, h4, h5, p, nav {
     font-family: sans-serif;
     color: var(--text-primary-color);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Campton Book', 'Open Sans', Helvetica, sans-serif;
+    font-weight: 200;
 }
 
+p, nav, a {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.text-brand {
+    color: #E24B5D;
+}
 a {
     color: var(--accent-white-color);
 }
@@ -53,9 +68,17 @@ a {
 }
 
 .swiper-container {
+    
     width: 100%;
     height: calc(100% - 50px);
     overflow: hidden;
+}
+
+.swiper-container .swiper-zoom-container>img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 .carousel-container {
@@ -77,6 +100,7 @@ a {
 
 .swiper-slide {
     display: flex;
+    background-color: red;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
@@ -84,29 +108,37 @@ a {
     color: white;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 40px 60px;
+    padding: 10px 10px;
+    width: fit-content;
 }
 
-/*new stuff*/
-.project-img-wrapper {
-   object-fit: cover;
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
 }
+
 
 .project {
+    cursor: pointer;
     margin: 20px;
-    width: 60vh;
+    width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
 .project-img-wrapper {
+    object-fit: cover;
     width: 100%;
     height: 0;
-    padding-bottom: 161.8%;
+    padding-bottom: 50%;
     position: relative;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 20px;
+    background-color: var(--background-color); 
 }
 
 .project-img-wrapper img {
@@ -115,6 +147,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
+    transition: opacity 0.5s ease-out;
 }
 
 .project-content {
@@ -123,31 +156,43 @@ a {
     padding-top: 0px;
     padding-left: 0px;
     color: var(--accent-white-color);
-    opacity: 0.5;
-    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s, transform 0.5s ease-in-out;
 }
 
-.project:hover .project-content {
-    opacity: 1;
-    transition: opacity 0.3s;
+
+/*swiper / carousel stufff*/ 
+
+.swiper-slide {
+    margin-top: 10px;
+    width: 1000px;
+}
+
+.swiper-wrapper {
+    height: auto;
 }
 
 .project-content h2 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     margin-top: 25px;
     margin-bottom: 5px;
+    transition: color 0.3s;  /* Add this line */
 }
 
 .project-content p {
     font-size: 1rem;
     margin-top: 0px;
+    line-height: 1.4em;
+    color: var(--text-muted-color);
 }
 
 footer {
     display: flex;
     justify-content: space-between; /* Distributes space evenly between the two divs */
-    padding: 20px; /* Add padding as needed */
-    align-items: center; /* Centers items vertically */
+    padding: 30px; /* Add padding as needed */
+    padding-bottom: 50px;
+    align-items: flex-end; /* Centers items vertically */
     height: 50px;
 }
 
@@ -174,19 +219,11 @@ footer .swiper-pagination {
 
 /*Parallax stuff - overwrites old project img containers*/
 
-.project-img-wrapper {
-    width: 100%;
-    height: 0;
-    padding-bottom: 161.8%;
-    overflow: hidden;
-    position: relative;
-}
-
 .project-img-wrapper img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 150%;  /* make the image larger than its container */
+    width: 100%;  /* make the image larger than its container */
     height: 120%; /* make the image larger than its container */
     object-fit: cover;
     border-radius: 5px;
@@ -205,17 +242,44 @@ footer .swiper-pagination {
     }
 
     nav a {
-        font-size: 1.4rem; /* Adjust as needed */
+        font-size: 1rem; /* Adjust as needed */
     }
 }
 
-
-
-
-
-
 /***** BOOTSTRAP STYLE ATTRIBUTES *****/
 
-.my-1 {
-    margin: 10px 0px;
+.brand-text {
+    font-family: 'Campton Book', 'Open Sans', Arial, Helvetica, sans-serif;
+    margin: 0px;
 }
+
+.text-small {
+    font-size: 0.8em;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+/*Page change*/
+#fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    border-radius: 10px;
+    transition: background-color 1s ease-out;
+}
+
+#fullscreen-image {
+    position: absolute;
+    transition: all 1s ease-out;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center; /* center the image within the container */
+}
+
