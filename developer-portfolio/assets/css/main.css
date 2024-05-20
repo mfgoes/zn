@@ -3,6 +3,7 @@
 /*
 	Info
 */
+
 .fas {
 	margin-right: 0.3rem;
 }
@@ -50,7 +51,7 @@ body, input, select, textarea, a {
 	color:#0000006c;
 }
 .avatar-img {
-	width: 110px;
+	width: auto;
 	height: 110px;
 }
 
@@ -69,7 +70,28 @@ body, input, select, textarea, a {
   }
 }
 
+.text-brand {
+	color: rgb(30, 96, 158);
+}
 
+.img-fluid {
+	border-radius: 10px;
+}
+
+/* Define a fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-in animation to the .img-hero class */
+.img-hero {
+    animation: fadeIn 0.4s ease-in-out; /* Change the animation duration and easing as needed */
+}
 /*Icons*/
 .icon {
 	font-family: 'Font Awesome 5 Free';

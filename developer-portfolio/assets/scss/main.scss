@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;500;600;700;1,400&display=swap');
+
+/* Brand Colors */
+$brand-primary: rgb(96, 74, 190);
+$brand-primary-lighter: rgb(110, 101, 230);
+$primary: green;
+
+/* Info */
+.fas {
+  margin-right: 0.3rem;
+}
+
+.card-special {
+  border-radius: 10px;
+  color: #fff;
+  background: $brand-primary;
+  background: linear-gradient(0deg, $brand-primary, $brand-primary-lighter);
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body, input, select, textarea, a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+  text-decoration: none;
+}
+
+.fw-bolder {
+  font-weight: 500;
+}
+
+.lead {
+  font-weight: 400;
+}
+
+.nav-item a {
+  color: #000000;
+}
+
+.nav-item a:hover {
+  color: rgba(0, 0, 0, 0.42);
+}
+
+.avatar-img {
+  width: auto;
+  height: 110px;
+}
+
+/* Bootstrap placeholders */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+/*rebranding*/
+.text-brand {
+  color: $brand-primary;
+}
+
+.background-brand {
+  background-color: $brand-primary;
+}
+
+.btn-brand {
+  background-color: $brand-lighter;
+  border-color: $brand-primary;
+  color: white;
+
+  &.btn:hover, &.btn:focus, &.btn:active {
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+    color: red;
+  }
+}
+
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #4874b4;
+  border-color: #0a58ca;
+}
+
+
+
+.img-fluid {
+  border-radius: 10px;
+}
+
+/* Define a fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to the .img-hero class */
+.img-hero {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Icons */
+.icon {
+  font-family: 'Font Awesome 5 Free';
+}
+
+.icon_brands {
+  font-family: 'Font Awesome 5 Brands';
+  font-size: 1.5em;
+  position: relative;
+  top: 3px;
+  margin-right: 2px;
+  color: #2c2c2c;
+}
+
+.link-subtle {
+  color: #2c2c2c;
+  transition: 0.5s;
+}
+
+.icon_brands:hover,
+.link-subtle:hover {
+  color: rgba(44, 44, 44, 0.58);
+  transition: 0.5s;
+}
+
+@media only screen and (min-width: 700px) {
+  .special-max-width {
+    max-width: 500px;
+  }
+}
